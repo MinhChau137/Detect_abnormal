@@ -1,24 +1,72 @@
 import pandas as pd
 from pycaret.anomaly import *
+from flask import Flask
+import threading
 import time
+import os
+import socket
 
-def read_data(file):
-    data= pd.read_csv(file) #file = 'test_2.csv'
-    return data
+app = Flask(__name__)
+IS_TERMINATE = False
 
-def add_data():
-    data_add = read_data('test_2.csv').tail(1) #data cần đánh giá (Tạm thời là dòng cuối file test_2) -> append vào file data, write vào file xử lý
-    data_add.to_csv('data_add.csv') #write vào file xử lý
-    data = read_data('data_add.csv') #đọc data ra 
-    return data
 
-def main():
+@app.route('/api/stream/<ip>:<int:port>/<int:time>', methods=['GET'])
+def handle_data_thread_init(ip, port, time):
+    ip_server = ip
+    port_server = port
+    time_to_detect = time
+    try:
+        th = threading.Thread(target=detect_abnormal, args=(
+            ip_server, port_server, time_to_detect,))
+        th.start()
+    except:
+        print("error when start thread")
+    th.join()
+    return 'OK', 200
+
+
+@app.route('/api/active', methods=['GET'])
+def active_process():
+    return 'Active process', 200
+
+
+@app.route('/api/terminate', methods=['GET'])
+def terminate_process():
+    global IS_TERMINATE
+    IS_TERMINATE = True
+    os._exit(0)
+    return
+
+def detect_abnormal(ip_server: str, port_server: int,time_to_detect: int):
     loaded_model = load_model('knn')
-    while True:
-        data = add_data()
+    if time_to_detect == 1:
+        data = pd.read_csv('./data/data_add.csv').tail(1) 
         predict = predict_model(loaded_model, data=data)
         print(predict.iloc[:,-2])
-        time.sleep(1)
+    else: 
+        s = socket.socket(socket.AF_INET,
+                  socket.SOCK_STREAM)
+        s.connect((ip_server, port_server))
+        start_time = time.monotonic()
+        while True:
+            msg = s.recv(8192)
+            while msg:
+                msg_recv = msg.decode()
+                with open('./data/data_add.csv', 'a') as the_file:
+                    the_file.write(msg_recv)
+                    
+                data = pd.read_csv('./data/data_add.csv').tail(1)
+                
+                predict = predict_model(loaded_model, data=data)
+                print(predict.iloc[:,-2])
+                
+                time.sleep(1)
+                if time.monotonic() - start_time > time_to_detect or IS_TERMINATE:
+                    # disconnect the client
+                    s.close()
+                msg = s.recv(8192)
+
+
 
 if __name__ == "__main__":
-    main()
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
