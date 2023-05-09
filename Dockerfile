@@ -1,6 +1,8 @@
 FROM ubuntu:20.04
 
-RUN apt update -y
+RUN sudo apt update && sudo apt upgrade -y
+RUN sudo apt install software-properties-common -y
+RUN sudo add-apt-repository ppa:deadsnakes/ppa
 RUN apt install python3.10
 
 RUN mkdir Detect_abnormal
