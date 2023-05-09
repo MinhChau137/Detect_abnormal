@@ -11,7 +11,7 @@ RUN apt install python3-pip -y
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
 RUN mkdir data
-ADD data/data_add.csv data
+COPY data/data_add.csv data
 COPY knn.pkl .
 COPY requirements.txt .
 COPY main.py .
