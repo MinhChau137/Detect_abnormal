@@ -1,16 +1,19 @@
 FROM ubuntu:20.04
-RUN pip install --pre pycaret
 
+
+RUN sudo apt update -y
+RUN sudo apt install python3.10
+
+RUN mkdir Detect_abnormal
+WORKDIR Detect_abnormal
 RUN mkdir data
-ADD data data
+ADD data/data_add.csv Detect_abnormal/data
+COPY knn.pkl .
+COPY requirements.txt .
+COPY main.py .
+RUN pip install -r requirements.txt
 
-RUN mkdir detection
-
-COPY jetson_detection.py detection
-
-WORKDIR detection
-# RUN python3 setup.py
 
 EXPOSE 8080
-CMD ["python3","jetson_detection.py"]
+CMD ["python3","main.py"]
 
