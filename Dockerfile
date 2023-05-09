@@ -1,8 +1,7 @@
 FROM ubuntu:20.04
 
-
-RUN sudo apt update -y
-RUN sudo apt install python3.10
+RUN apt update -y
+RUN apt install python3.10
 
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
