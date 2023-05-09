@@ -4,7 +4,8 @@ RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:deadsnakes/ppa && \
     apt-get update && \
-    apt install -y python3.10
+    apt install -y python3.10 && \
+    apt install -y python3-pip
 
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
