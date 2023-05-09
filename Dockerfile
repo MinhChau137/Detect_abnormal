@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
-RUN sudo apt update && sudo apt upgrade -y
+RUN apt-get update && \
+      apt-get -y install sudo
 RUN sudo apt install software-properties-common -y
 RUN sudo add-apt-repository ppa:deadsnakes/ppa
 RUN apt install python3.10
