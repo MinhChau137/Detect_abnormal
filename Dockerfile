@@ -6,8 +6,6 @@ RUN apt-get update && \
     apt-get update && \
     apt install -y python3.10
 
-RUN pip3 install --upgrade pip
-
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
 RUN mkdir data
