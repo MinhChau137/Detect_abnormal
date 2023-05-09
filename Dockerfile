@@ -5,11 +5,8 @@ RUN apt-get update && \
     add-apt-repository -y ppa:deadsnakes/ppa && \
     apt-get update && \
     apt install -y python3.10
-    
-RUN set -xe \
-    && apt-get update \
-    && apt-get install python3-pip
-RUN pip install --upgrade pip
+
+RUN pip3 install --upgrade pip
 
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
@@ -18,7 +15,7 @@ ADD data/data_add.csv Detect_abnormal/data
 COPY knn.pkl .
 COPY requirements.txt .
 COPY main.py .
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 
 EXPOSE 8080
