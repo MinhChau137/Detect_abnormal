@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get update && \
     apt install -y python3.10
 
-RUN apt install python3-pip
+RUN apt install python3-pip -y
 
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
