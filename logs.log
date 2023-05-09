@@ -2207,3 +2207,12 @@
   metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
   radius=1.0))]), ml_usecase=None)
 2023-05-08 16:44:39,951:INFO:Set up data.
+2023-05-09 10:51:01,993:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-09 10:51:02,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-09 10:51:02,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-09 10:51:02,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-09 10:51:03,712:INFO:Soft dependency imported: prophet: 1.1.2
