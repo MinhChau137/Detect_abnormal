@@ -13,7 +13,6 @@ RUN sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3
 
 RUN apt install python3-pip -y
 RUN apt install --reinstall python3.10-distutils -y
-RUN python3 -V
 
 RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
@@ -22,7 +21,7 @@ COPY data/data_add.csv data
 COPY knn.pkl .
 COPY requirements.txt .
 COPY main.py .
-RUN pip install -r requirements.txt
+RUN pip3.10 install -r requirements.txt
 
 
 EXPOSE 8080
