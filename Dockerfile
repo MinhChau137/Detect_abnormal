@@ -7,8 +7,7 @@ RUN apt-get update && \
     apt-get update && \
     apt install -y python3.10
 
-RUN sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2 && \
-    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 && \
+RUN sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 5 && \
     sudo update-alternatives --config python3
 
 RUN apt install python3-pip -y
