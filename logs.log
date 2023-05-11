@@ -2238,3 +2238,147 @@
 2023-05-09 11:24:14,278:INFO:Soft dependency imported: prophet: 1.1.2
 2023-05-09 11:24:20,927:INFO:Initializing load_model()
 2023-05-09 11:24:20,927:INFO:load_model(model_name=knn, platform=None, authentication=None, verbose=True)
+2023-05-10 16:12:27,040:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 16:12:27,087:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 16:12:27,088:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 16:12:27,088:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 16:12:28,675:INFO:Soft dependency imported: prophet: 1.1.2
+2023-05-10 16:13:08,536:INFO:Initializing load_model()
+2023-05-10 16:13:08,536:INFO:load_model(model_name=knn, platform=None, authentication=None, verbose=True)
+2023-05-10 23:09:15,324:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 23:09:15,343:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 23:09:15,343:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 23:09:15,343:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-10 23:09:17,181:INFO:Soft dependency imported: prophet: 1.1.2
+2023-05-10 23:09:38,892:INFO:Initializing load_model()
+2023-05-10 23:09:38,893:INFO:load_model(model_name=knn, platform=None, authentication=None, verbose=True)
+2023-05-10 23:09:40,117:INFO:Initializing predict_model()
+2023-05-10 23:09:40,117:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x000001BE16FB5090>, estimator=Pipeline(memory=FastMemory(location=C:\Users\MINHCH~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))]), ml_usecase=None)
+2023-05-10 23:09:40,130:INFO:Set up data.
+2023-05-10 23:09:41,309:INFO:Initializing predict_model()
+2023-05-10 23:09:41,309:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x000001BE16FB4550>, estimator=Pipeline(memory=FastMemory(location=C:\Users\MINHCH~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))]), ml_usecase=None)
+2023-05-10 23:09:41,310:INFO:Set up data.
+2023-05-10 23:09:42,465:INFO:Initializing predict_model()
+2023-05-10 23:09:42,465:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x000001BE16FB54B0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\MINHCH~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))]), ml_usecase=None)
+2023-05-10 23:09:42,465:INFO:Set up data.
+2023-05-10 23:09:43,626:INFO:Initializing predict_model()
+2023-05-10 23:09:43,626:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x000001BE170F5360>, estimator=Pipeline(memory=FastMemory(location=C:\Users\MINHCH~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))]), ml_usecase=None)
+2023-05-10 23:09:43,626:INFO:Set up data.
+2023-05-10 23:09:44,784:INFO:Initializing predict_model()
+2023-05-10 23:09:44,784:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x000001BE16F5FC40>, estimator=Pipeline(memory=FastMemory(location=C:\Users\MINHCH~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))]), ml_usecase=None)
+2023-05-10 23:09:44,784:INFO:Set up data.
+2023-05-10 23:13:43,543:INFO:Initializing load_model()
+2023-05-10 23:13:43,544:INFO:load_model(model_name=knn, platform=None, authentication=None, verbose=True)
+2023-05-10 23:13:43,600:INFO:Initializing predict_model()
+2023-05-10 23:13:43,600:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x000001BE16FB4790>, estimator=Pipeline(memory=FastMemory(location=C:\Users\MINHCH~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))]), ml_usecase=None)
+2023-05-10 23:13:43,601:INFO:Set up data.
