@@ -10,7 +10,7 @@ app = Flask(__name__)
 IS_TERMINATE = False
 
 
-@app.route('/api/stream/<ip>:<int:port>/<int:time>/<int:time_sleep>', methods=['GET'])
+@app.route('/api/stream/<ip>:<int:port>/<int:time_detect>/<int:time_sleep>', methods=['GET'])
 def handle_data_thread_init(ip, port, time_detect, time_sleep):
     ip_server = ip
     port_server = port
@@ -39,7 +39,7 @@ def terminate_process():
     return
 
 def detect_abnormal(ip_server: str, port_server: int,time_to_detect: int, time_sleep: int):
-    loaded_model = load_model('knn_3.8')
+    loaded_model = load_model('knn')
     if time_to_detect == 1:
         data = pd.read_csv('./data/data_add.csv').tail(1) 
         predict = predict_model(loaded_model, data=data)
