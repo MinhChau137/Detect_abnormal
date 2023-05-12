@@ -2382,3 +2382,381 @@
   metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
   radius=1.0))]), ml_usecase=None)
 2023-05-10 23:13:43,601:INFO:Set up data.
+2023-05-12 13:31:28,773:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:31:28,834:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:31:28,834:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:31:28,838:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:31:30,722:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-05-12 13:31:31,769:INFO:PyCaret AnomalyExperiment
+2023-05-12 13:31:31,769:INFO:Logging name: anomaly-default-name
+2023-05-12 13:31:31,769:INFO:ML Usecase: MLUsecase.ANOMALY
+2023-05-12 13:31:31,769:INFO:version 3.0.0
+2023-05-12 13:31:31,769:INFO:Initializing setup()
+2023-05-12 13:31:31,769:INFO:self.USI: 5204
+2023-05-12 13:31:31,769:INFO:self._variable_keys: {'_ml_usecase', 'exp_id', 'X', 'n_jobs_param', '_available_plots', 'log_plots_param', 'exp_name_log', 'USI', 'data', 'memory', 'seed', 'logging_param', 'idx', 'pipeline', 'gpu_param', 'html_param', 'gpu_n_jobs_param'}
+2023-05-12 13:31:31,769:INFO:Checking environment
+2023-05-12 13:31:31,770:INFO:python_version: 3.8.10
+2023-05-12 13:31:31,770:INFO:python_build: ('default', 'Mar 13 2023 10:26:41')
+2023-05-12 13:31:31,770:INFO:machine: x86_64
+2023-05-12 13:31:31,770:INFO:platform: Linux-5.15.0-69-generic-x86_64-with-glibc2.29
+2023-05-12 13:31:31,770:INFO:Memory: svmem(total=8373764096, available=4318789632, percent=48.4, used=3638833152, free=461692928, active=2095529984, inactive=4660359168, buffers=165789696, cached=4107448320, shared=107376640, slab=570654720)
+2023-05-12 13:31:31,808:INFO:Physical Core: 2
+2023-05-12 13:31:31,814:INFO:Logical Core: 2
+2023-05-12 13:31:31,815:INFO:Checking libraries
+2023-05-12 13:31:31,816:INFO:System:
+2023-05-12 13:31:31,816:INFO:    python: 3.8.10 (default, Mar 13 2023, 10:26:41)  [GCC 9.4.0]
+2023-05-12 13:31:31,817:INFO:executable: /bin/python3
+2023-05-12 13:31:31,821:INFO:   machine: Linux-5.15.0-69-generic-x86_64-with-glibc2.29
+2023-05-12 13:31:31,823:INFO:PyCaret required dependencies:
+2023-05-12 13:31:31,823:INFO:                 pip: 20.0.2
+2023-05-12 13:31:31,826:INFO:          setuptools: 45.2.0
+2023-05-12 13:31:31,827:INFO:             pycaret: 3.0.0
+2023-05-12 13:31:31,827:INFO:             IPython: 8.12.2
+2023-05-12 13:31:31,828:INFO:          ipywidgets: 8.0.6
+2023-05-12 13:31:31,832:INFO:                tqdm: 4.65.0
+2023-05-12 13:31:31,834:INFO:               numpy: 1.24.3
+2023-05-12 13:31:31,835:INFO:              pandas: 1.5.3
+2023-05-12 13:31:31,836:INFO:              jinja2: 3.1.2
+2023-05-12 13:31:31,837:INFO:               scipy: 1.10.1
+2023-05-12 13:31:31,837:INFO:              joblib: 1.2.0
+2023-05-12 13:31:31,838:INFO:             sklearn: 1.2.2
+2023-05-12 13:31:31,839:INFO:                pyod: 1.0.9
+2023-05-12 13:31:31,839:INFO:            imblearn: 0.10.1
+2023-05-12 13:31:31,840:INFO:   category_encoders: 2.6.0
+2023-05-12 13:31:31,840:INFO:            lightgbm: 3.3.5
+2023-05-12 13:31:31,842:INFO:               numba: 0.57.0
+2023-05-12 13:31:31,845:INFO:            requests: 2.22.0
+2023-05-12 13:31:31,845:INFO:          matplotlib: 3.7.1
+2023-05-12 13:31:31,846:INFO:          scikitplot: 0.3.7
+2023-05-12 13:31:31,846:INFO:         yellowbrick: 1.5
+2023-05-12 13:31:31,847:INFO:              plotly: 5.14.1
+2023-05-12 13:31:31,847:INFO:             kaleido: 0.2.1
+2023-05-12 13:31:31,848:INFO:         statsmodels: 0.14.0
+2023-05-12 13:31:31,850:INFO:              sktime: 0.18.0
+2023-05-12 13:31:31,850:INFO:               tbats: 1.1.3
+2023-05-12 13:31:31,851:INFO:            pmdarima: 2.0.3
+2023-05-12 13:31:31,852:INFO:              psutil: 5.9.5
+2023-05-12 13:31:31,852:INFO:PyCaret optional dependencies:
+2023-05-12 13:31:32,078:INFO:                shap: Not installed
+2023-05-12 13:31:32,078:INFO:           interpret: Not installed
+2023-05-12 13:31:32,078:INFO:                umap: Not installed
+2023-05-12 13:31:32,078:INFO:    pandas_profiling: Not installed
+2023-05-12 13:31:32,078:INFO:  explainerdashboard: Not installed
+2023-05-12 13:31:32,078:INFO:             autoviz: Not installed
+2023-05-12 13:31:32,078:INFO:           fairlearn: Not installed
+2023-05-12 13:31:32,078:INFO:             xgboost: Not installed
+2023-05-12 13:31:32,078:INFO:            catboost: Not installed
+2023-05-12 13:31:32,078:INFO:              kmodes: Not installed
+2023-05-12 13:31:32,078:INFO:             mlxtend: Not installed
+2023-05-12 13:31:32,078:INFO:       statsforecast: Not installed
+2023-05-12 13:31:32,079:INFO:        tune_sklearn: Not installed
+2023-05-12 13:31:32,079:INFO:                 ray: Not installed
+2023-05-12 13:31:32,079:INFO:            hyperopt: Not installed
+2023-05-12 13:31:32,079:INFO:              optuna: Not installed
+2023-05-12 13:31:32,079:INFO:               skopt: Not installed
+2023-05-12 13:31:32,079:INFO:              mlflow: Not installed
+2023-05-12 13:31:32,079:INFO:              gradio: Not installed
+2023-05-12 13:31:32,079:INFO:             fastapi: Not installed
+2023-05-12 13:31:32,079:INFO:             uvicorn: Not installed
+2023-05-12 13:31:32,079:INFO:              m2cgen: Not installed
+2023-05-12 13:31:32,079:INFO:           evidently: Not installed
+2023-05-12 13:31:32,079:INFO:               fugue: Not installed
+2023-05-12 13:31:32,079:INFO:           streamlit: Not installed
+2023-05-12 13:31:32,079:INFO:             prophet: Not installed
+2023-05-12 13:31:32,080:INFO:None
+2023-05-12 13:31:32,080:INFO:Set up data.
+2023-05-12 13:31:32,123:INFO:Set up index.
+2023-05-12 13:31:32,124:INFO:Assigning column types.
+2023-05-12 13:31:32,130:INFO:Engine successfully changes for model 'kmeans' to 'sklearn'.
+2023-05-12 13:31:33,402:INFO:Engine successfully changes for model 'dbscan' to 'sklearn'.
+2023-05-12 13:31:33,406:INFO:Preparing preprocessing pipeline...
+2023-05-12 13:31:33,407:INFO:Set up simple imputation.
+2023-05-12 13:31:33,433:INFO:Set up encoding of ordinal features.
+2023-05-12 13:31:33,438:INFO:Set up encoding of categorical features.
+2023-05-12 13:31:33,439:INFO:Set up feature normalization.
+2023-05-12 13:31:33,800:INFO:Finished creating preprocessing pipeline.
+2023-05-12 13:31:33,841:INFO:Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OrdinalEncod...
+                                                               mapping=[{'col': 'day_name',
+                                                                         'data_type': dtype('O'),
+                                                                         'mapping': Monday       0
+Tuesday      1
+Wednesday    2
+Thursday     3
+Friday       4
+Saturday     5
+Sunday       6
+NaN         -1
+dtype: int64}]))),
+                ('onehot_encoding',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler()))])
+2023-05-12 13:31:33,841:INFO:Creating final display dataframe.
+2023-05-12 13:31:33,979:INFO:Setup _display_container:                  Description                 Value
+0                 Session id                    42
+1        Original data shape            (3672, 57)
+2     Transformed data shape            (3672, 84)
+3           Ordinal features                     1
+4           Numeric features                     1
+5       Categorical features                     1
+6                 Preprocess                  True
+7            Imputation type                simple
+8         Numeric imputation                  mean
+9     Categorical imputation                  mode
+10  Maximum one-hot encoding                    -1
+11           Encoding method                  None
+12                 Normalize                  True
+13          Normalize method                minmax
+14                  CPU Jobs                    -1
+15                   Use GPU                 False
+16            Log Experiment                 False
+17           Experiment Name  anomaly-default-name
+18                       USI                  5204
+2023-05-12 13:31:34,004:INFO:setup() successfully completed in 2.28s...............
+2023-05-12 13:31:34,101:INFO:Initializing get_config()
+2023-05-12 13:31:34,108:INFO:get_config(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x7f49b085b250>, variable=X)
+2023-05-12 13:31:34,150:INFO:Variable:  returned as                             sensor_00    sensor_01    sensor_02    sensor_03  \
+timestamp                                                                      
+2018-04-01 00:00:00+00:00  147.270370  2913.367920  3188.541504  2773.524170   
+2018-04-01 01:00:00+00:00  147.254639  2880.946045  3186.414795  2756.119629   
+2018-04-01 02:00:00+00:00  147.217255  2939.583252  3180.642334  2735.590088   
+2018-04-01 03:00:00+00:00  147.274307  2919.270752  3178.559082  2713.107422   
+2018-04-01 04:00:00+00:00  147.227097  2899.609375  3172.092041  2707.855713   
+...                               ...          ...          ...          ...   
+2018-08-31 19:00:00+00:00  144.168457  2960.329834  3059.548584  2606.076172   
+2018-08-31 20:00:00+00:00  144.160599  2926.388672  3048.871338  2613.020752   
+2018-08-31 21:00:00+00:00  144.158630  2900.217041  3038.194580  2597.482666   
+2018-08-31 22:00:00+00:00  144.175354  2862.586670  3035.937500  2580.815918   
+2018-08-31 23:00:00+00:00  144.142883  2865.234375  3031.770752  2584.895752   
+
+                              sensor_04    sensor_05   sensor_06    sensor_07  \
+timestamp                                                                       
+2018-04-01 00:00:00+00:00  38047.222656  4544.186523  801.830078   969.726440   
+2018-04-01 01:00:00+00:00  38054.167969  4473.953125  815.581482   969.400879   
+2018-04-01 02:00:00+00:00  38065.625000  4501.012695  815.798523   969.646790   
+2018-04-01 03:00:00+00:00  38005.019531  4395.382812  816.261475   969.559998   
+2018-04-01 04:00:00+00:00  38099.187500  4208.990234  815.111328   969.089844   
+...                                 ...          ...         ...          ...   
+2018-08-31 19:00:00+00:00  37942.824219  4758.575195  907.624390  1000.426880   
+2018-08-31 20:00:00+00:00  37934.257812  3869.074463  906.192078   999.898865   
+2018-08-31 21:00:00+00:00  37904.906250  4151.589355  906.597229   999.804810   
+2018-08-31 22:00:00+00:00  37930.785156  4406.478027  906.184875   999.631165   
+2018-08-31 23:00:00+00:00  37914.207031  4092.699707  907.117981   999.153748   
+
+                            sensor_08   sensor_09  ...     sensor_48  \
+timestamp                                          ...                 
+2018-04-01 00:00:00+00:00  942.151367  905.193909  ...  11847.511719   
+2018-04-01 01:00:00+00:00  942.766235  905.541138  ...  10841.146484   
+2018-04-01 02:00:00+00:00  940.067993  905.533875  ...  10416.956055   
+2018-04-01 03:00:00+00:00  941.319458  905.490479  ...  12263.310547   
+2018-04-01 04:00:00+00:00  942.129700  905.721924  ...  12785.011719   
+...                               ...         ...  ...           ...   
+2018-08-31 19:00:00+00:00  939.756958  905.852173  ...  12324.653320   
+2018-08-31 20:00:00+00:00  940.719055  904.882874  ...  17492.187500   
+2018-08-31 21:00:00+00:00  940.451416  905.859375  ...  21911.458984   
+2018-08-31 22:00:00+00:00  940.039062  905.374756  ...  13465.277344   
+2018-08-31 23:00:00+00:00  940.972290  905.664062  ...  16418.982422   
+
+                             sensor_49     sensor_51  Operation  day  \
+timestamp                                                              
+2018-04-01 00:00:00+00:00  4690.104492  12601.851562          0    1   
+2018-04-01 01:00:00+00:00  4403.066895  12224.247070          0    1   
+2018-04-01 02:00:00+00:00  4550.925781  12599.826172          0    1   
+2018-04-01 03:00:00+00:00  6278.356445  13360.821289          0    1   
+2018-04-01 04:00:00+00:00  6850.694336  12698.495117          0    1   
+...                                ...           ...        ...  ...   
+2018-08-31 19:00:00+00:00  5211.516113  11815.393555          0   31   
+2018-08-31 20:00:00+00:00  7658.564453  14592.881836          0   31   
+2018-08-31 21:00:00+00:00  6587.673828  13746.817383          0   31   
+2018-08-31 22:00:00+00:00  6186.342773  12209.780273          0   31   
+2018-08-31 23:00:00+00:00  8093.171875  13631.944336          0   31   
+
+                           day_name  day_of_year  week_of_year  hour  \
+timestamp                                                              
+2018-04-01 00:00:00+00:00    Sunday           91            13     0   
+2018-04-01 01:00:00+00:00    Sunday           91            13     1   
+2018-04-01 02:00:00+00:00    Sunday           91            13     2   
+2018-04-01 03:00:00+00:00    Sunday           91            13     3   
+2018-04-01 04:00:00+00:00    Sunday           91            13     4   
+...                             ...          ...           ...   ...   
+2018-08-31 19:00:00+00:00    Friday          243            35    19   
+2018-08-31 20:00:00+00:00    Friday          243            35    20   
+2018-08-31 21:00:00+00:00    Friday          243            35    21   
+2018-08-31 22:00:00+00:00    Friday          243            35    22   
+2018-08-31 23:00:00+00:00    Friday          243            35    23   
+
+                           is_weekday  
+timestamp                              
+2018-04-01 00:00:00+00:00           7  
+2018-04-01 01:00:00+00:00           7  
+2018-04-01 02:00:00+00:00           7  
+2018-04-01 03:00:00+00:00           7  
+2018-04-01 04:00:00+00:00           7  
+...                               ...  
+2018-08-31 19:00:00+00:00           5  
+2018-08-31 20:00:00+00:00           5  
+2018-08-31 21:00:00+00:00           5  
+2018-08-31 22:00:00+00:00           5  
+2018-08-31 23:00:00+00:00           5  
+
+[3672 rows x 57 columns]
+2023-05-12 13:31:34,151:INFO:get_config() successfully completed......................................
+2023-05-12 13:31:34,289:INFO:gpu_param set to False
+2023-05-12 13:31:34,572:INFO:Initializing create_model()
+2023-05-12 13:31:34,576:INFO:create_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x7f49b085b250>, estimator=knn, num_clusters=4, fraction=0.05, ground_truth=None, round=4, fit_kwargs=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, raise_num_clusters=False, display=None, kwargs={})
+2023-05-12 13:31:34,577:INFO:Checking exceptions
+2023-05-12 13:31:34,828:INFO:Importing untrained model
+2023-05-12 13:31:34,836:INFO:K-Nearest Neighbors Detector Imported successfully
+2023-05-12 13:31:34,843:INFO:Fitting Model
+2023-05-12 13:31:35,474:INFO:KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0)
+2023-05-12 13:31:35,475:INFO:create_models() successfully completed......................................
+2023-05-12 13:31:35,511:INFO:Uploading results into container
+2023-05-12 13:31:35,511:INFO:Uploading model into container now
+2023-05-12 13:31:35,517:INFO:_master_model_container: 1
+2023-05-12 13:31:35,517:INFO:_display_container: 1
+2023-05-12 13:31:35,520:INFO:KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0)
+2023-05-12 13:31:35,520:INFO:create_model() successfully completed......................................
+2023-05-12 13:31:36,309:INFO:Initializing plot_model()
+2023-05-12 13:31:36,310:INFO:plot_model(plot=tsne, fold=None, use_train_data=False, verbose=True, display=None, display_format=None, estimator=KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x7f49b085b250>, system=True)
+2023-05-12 13:31:36,311:INFO:Checking exceptions
+2023-05-12 13:31:36,325:INFO:Preloading libraries
+2023-05-12 13:31:36,355:INFO:Copying training dataset
+2023-05-12 13:31:36,356:INFO:Plot type: tsne
+2023-05-12 13:31:36,358:INFO:SubProcess assign_model() called ==================================
+2023-05-12 13:31:36,365:INFO:Initializing assign_model()
+2023-05-12 13:31:36,365:INFO:assign_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x7f49b085b250>, model=KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0), transformation=True, score=False, verbose=False)
+2023-05-12 13:31:36,365:INFO:Checking exceptions
+2023-05-12 13:31:36,366:INFO:Determining Trained Model
+2023-05-12 13:31:36,366:INFO:Trained Model : K-Nearest Neighbors Detector
+2023-05-12 13:31:36,366:INFO:Copying data
+2023-05-12 13:31:36,391:INFO:Transformation parameter set to True. Assigned clusters are attached on transformed dataset.
+2023-05-12 13:31:36,394:INFO:(3672, 85)
+2023-05-12 13:31:36,395:INFO:assign_model() successfully completed......................................
+2023-05-12 13:31:36,405:INFO:SubProcess assign_model() end ==================================
+2023-05-12 13:31:36,411:INFO:Getting dummies to cast categorical variables
+2023-05-12 13:31:36,411:INFO:Fitting TSNE()
+2023-05-12 13:32:24,607:INFO:Rendering Visual
+2023-05-12 13:32:25,734:INFO:Visual Rendered Successfully
+2023-05-12 13:32:25,921:INFO:plot_model() successfully completed......................................
+2023-05-12 13:32:26,011:INFO:Initializing predict_model()
+2023-05-12 13:32:26,016:INFO:predict_model(self=<pycaret.anomaly.oop.AnomalyExperiment object at 0x7f49b085b250>, estimator=KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0), ml_usecase=None)
+2023-05-12 13:32:30,934:INFO:Initializing save_model()
+2023-05-12 13:32:30,937:INFO:save_model(model=KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0), model_name=knn_3.8, prep_pipe_=Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OrdinalEncod...
+                                                               mapping=[{'col': 'day_name',
+                                                                         'data_type': dtype('O'),
+                                                                         'mapping': Monday       0
+Tuesday      1
+Wednesday    2
+Thursday     3
+Friday       4
+Saturday     5
+Sunday       6
+NaN         -1
+dtype: int64}]))),
+                ('onehot_encoding',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler()))]), verbose=True, use_case=MLUsecase.ANOMALY, kwargs={})
+2023-05-12 13:32:30,937:INFO:Adding model into prep_pipe
+2023-05-12 13:32:31,234:INFO:knn_3.8.pkl saved in current working directory
+2023-05-12 13:32:31,357:INFO:Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['is_weekday'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OrdinalEncod...
+                 TransformerWrapper(include=['day_name'],
+                                    transformer=OneHotEncoder(cols=['day_name'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model',
+                 KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0))])
+2023-05-12 13:32:31,358:INFO:save_model() successfully completed......................................
+2023-05-12 13:32:32,792:INFO:Initializing load_model()
+2023-05-12 13:32:32,794:INFO:load_model(model_name=knn_3.8, platform=None, authentication=None, verbose=True)
+2023-05-12 13:34:41,659:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:34:41,660:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:34:41,660:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:34:41,660:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 13:34:42,717:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-05-12 14:06:51,188:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:06:51,188:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:06:51,188:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:06:51,188:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:06:52,087:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-05-12 14:08:54,910:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:08:54,911:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:08:54,911:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:08:54,912:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 14:08:55,645:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-05-12 15:02:31,748:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 15:02:31,749:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 15:02:31,749:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 15:02:31,750:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-05-12 15:02:32,750:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
