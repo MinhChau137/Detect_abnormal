@@ -10,14 +10,15 @@ app = Flask(__name__)
 IS_TERMINATE = False
 
 
-@app.route('/api/stream/<ip>:<int:port>/<int:time>', methods=['GET'])
-def handle_data_thread_init(ip, port, time):
+@app.route('/api/stream/<ip>:<int:port>/<int:time>/<int:time_sleep>', methods=['GET'])
+def handle_data_thread_init(ip, port, time_detect, time_sleep):
     ip_server = ip
     port_server = port
-    time_to_detect = time
+    time_to_detect = time_detect
+    time_sleep = time_sleep
     try:
         th = threading.Thread(target=detect_abnormal, args=(
-            ip_server, port_server, time_to_detect,))
+            ip_server, port_server, time_to_detect, time_sleep))
         th.start()
     except:
         print("error when start thread")
@@ -37,7 +38,7 @@ def terminate_process():
     os._exit(0)
     return
 
-def detect_abnormal(ip_server: str, port_server: int,time_to_detect: int):
+def detect_abnormal(ip_server: str, port_server: int,time_to_detect: int, time_sleep: int):
     loaded_model = load_model('knn')
     if time_to_detect == 1:
         data = pd.read_csv('./data/data_add.csv').tail(1) 
@@ -58,12 +59,13 @@ def detect_abnormal(ip_server: str, port_server: int,time_to_detect: int):
                 data = pd.read_csv('./data/data_add.csv').tail(1)
                 
                 predict = predict_model(loaded_model, data=data)
-                print(predict.iloc[:,-2])
+                print(predict.iloc[:,-2])                
+                time.sleep(time_sleep)
                 
-                time.sleep(1)
                 if time.monotonic() - start_time > time_to_detect or IS_TERMINATE:
                     # disconnect the client
                     s.close()
+                    return False
                 msg = s.recv(8192)
 
 
