@@ -13,7 +13,7 @@ RUN mkdir Detect_abnormal
 WORKDIR Detect_abnormal
 RUN mkdir data
 COPY data/data_add.csv data
-COPY knn.pkl .
+COPY knn_3.8.pkl .
 COPY requirements.txt .
 COPY main.py .
 RUN python3 -m pip install -r requirements.txt
