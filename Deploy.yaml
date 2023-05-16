@@ -1,0 +1,21 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: serverless
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/window: 50s
+    spec:
+      containers:
+      - image: mc0137/detect_abnormal:v1.3@sha256:fd4529666200c59cbb193de3fd0852dcca6e6626da7499374b298cb794600c72
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - sh
+              - -c
+              - curl "http://0.0.0.0:8080/api/terminate"
+        ports:
+        - containerPort: 8080
