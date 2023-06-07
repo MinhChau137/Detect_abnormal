@@ -1,0 +1,4 @@
+./data/sensor.csv
+./data/test_2.csv
+./data/test.csv
+*.log
