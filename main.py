@@ -21,6 +21,7 @@ def handle_data_thread_init(ip, port, time_detect, time_sleep):
             socket.SOCK_STREAM)
         try:
             s.connect((ip_server, port_server))
+            s.send(str(time_sleep).encode())
             th = threading.Thread(target=detect_abnormal, args=(
                 s,time_to_detect, time_sleep))
             th.start()
@@ -47,7 +48,7 @@ def terminate_process():
     return
 
 def detect_abnormal(s: socket ,time_to_detect: int, time_sleep: int):
-    loaded_model = load_model('knn_3.8')
+    loaded_model = load_model('knn')
     
     start_time = time.monotonic()
     
